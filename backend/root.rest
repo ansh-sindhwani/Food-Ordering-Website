@@ -1,0 +1,241 @@
+POST http://172.31.24.82:4000/user/register
+Content-Type: application/json
+
+{
+    "name":"gg02",
+    "email":"g02@gmail.com",
+    "ContactNumber": "9876543210",
+    "age": 19,
+    "batch": 2,
+    "Password": "hello"
+}
+
+###
+
+GET http://localhost:4000/user
+
+###
+
+GET http://localhost:4000/user/listitems
+
+###
+GET http://localhost:4000/user/vendor
+
+###
+POST http://localhost:4000/user/register
+Content-Type: application/json
+
+{
+    "name":"gg02",
+    "usertype":"vendor",
+    "email":"g02@gmail.com",
+    "ContactNumber": "9876543210",
+    "shopname":"JC",
+    "opentime": "9pm",
+    "closetime":"3am",
+    "Password": "hello"
+}
+
+###
+POST http://localhost:4000/vendor/additem
+Content-Type: application/json
+
+{
+    "name":"maggi",
+    "price": 15,
+    "email": "shreyash@gmail.com",
+    "VegORnot": "Non Veg",
+    "tags": ["hot","peri peri"]
+}
+
+###
+POST  http://localhost:4000/vendor/listitem
+Content-Type: application/json
+
+{
+    "email":"g"
+}
+
+###
+POST http://localhost:4000/vendor/editprofile
+Content-Type: application/json
+
+{
+    "email":"g",
+    "ContactNumber":9999000010,
+    "OpenTime":"10:00",
+    "CloseTime":"12:00",
+    "Password":"siya"
+}
+
+###
+POST http://localhost:4000/vendor/edititem
+Content-Type: application/json
+
+{
+    "email":"g",
+    "name":"maggi",
+    "price":10,
+    "VegORnot":"Veg",
+    "tags":["Bekar"],
+    "Addon": [{"Item":"cheese","Price":10},{"Item":"butter","Price":15}]
+}
+
+###
+POST http://localhost:4000/vendor/editgetitem
+Content-Type: application/json
+
+{
+    "email":"g",
+    "name":"maggi"
+}
+
+###
+POST http://localhost:4000/vendor/removeitem
+Content-Type: application/json
+
+{
+    "email":"g",
+    "name":"Orange Juice"
+}
+
+###
+POST http://localhost:4000/user/editgetprofile
+Content-Type: application/json
+
+{
+    "email":"sidhh@gmail.com"
+}
+
+###
+POST http://localhost:4000/user/addfavourite
+Content-Type: application/json
+
+{
+    "email":"mayank@gmail.com",
+    "Favourite":"61eacfc99550f00142b8a978"
+}
+
+###
+POST http://localhost:4000/user/order
+Content-Type: application/json
+
+{
+    "buyer": "mayank@gmail.com", 
+    "item_name": "omellete", 
+    "price": 150, 
+    "seller": "61eac67d67249800e944fa4f",
+    "quantity": 2,
+    "Addon":[{"Item": "double cheese", "Price": "20"},{"Item": "extra bread", "Price": "5"}]
+}
+
+###
+GET http://localhost:4000/user/allorders
+
+###
+POST http://localhost:4000/user/getfavourite
+Content-Type: application/json
+
+{
+    "email":"sk@gmail.com"
+}
+
+###
+POST http://localhost:4000/vendor/showorder
+Content-Type: application/json
+
+{
+    "email":"gautam@gmail.com"
+}
+
+###
+POST http://localhost:4000/vendor/changestatus
+Content-Type: application/json
+
+{
+    "id":"61ee8f452eb4ef04bce39bd2",
+    "status":"Placed"
+}
+
+###
+POST http://localhost:4000/vendor/incCurrentOrder
+Content-Type: application/json
+
+{
+    "email":"karman@gmail.com"
+}
+
+###
+POST http://localhost:4000/vendor/decCurrentOrder
+Content-Type: application/json
+
+{
+    "email":"karman@gmail.com"
+}
+
+###
+POST http://localhost:4000/vendor/editgetprofile
+Content-Type: application/json
+
+{
+    "email":"karman@gmail.com"
+}
+
+###
+POST http://localhost:4000/user/getfavourite
+Content-Type: application/json
+
+{
+    "email":"sk@gmail.com"
+}
+
+###
+POST http://localhost:4000/user/changestatus
+Content-Type: application/json
+
+{
+    "id":"61f00c42f53e151627c2d628",
+    "status":"Ready For Pickup"
+}
+
+###
+POST http://localhost:4000/user/ratingchange
+Content-Type: application/json
+
+{
+    "id":"61effee14eb1110ddc872a9b",
+    "rating":3
+}
+
+###
+POST http://localhost:4000/user/showorder
+Content-Type: application/json
+
+{
+    "email":"mayank@gmail.com"
+}
+
+###
+POST http://localhost:4000/vendor/rejectstatus
+Content-Type: application/json
+
+{
+    "id":"61f00c42f53e151627c2d628",
+    "wallet":30
+}
+
+###
+POST http://localhost:4000/vendor/topfive
+Content-Type: application/json
+
+{
+    "email":"joshi@gmail.com"
+}
+
+###
+POST http://localhost:4000/vendor/order_count
+Content-Type: application/json
+
+{
+    "email":"karman@gmail.com"
+}
